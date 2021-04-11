@@ -1,18 +1,19 @@
 .searchPage_header {
     display: flex;
-    position: sticky;
     top: 0;
     background-color: white;
     z-index: 100;
     align-items: flex-start;
-    padding: 30px;
+    padding: 20px;
     border-bottom: 1px solid lightgray;
 }
 
 .searchPage_logo {
     object-fit: contain;
-    height: 50px;
+    height: 30px;
     margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .searchPage_headerBody > .search > .search_input {
@@ -54,18 +55,21 @@
 }
 
 .searchPage_result {
-    margin: 40px 0;
+    margin: 0 0px;
+    margin-bottom: 30px;
 }
 
 .searchPage_resultCount {
     color: #70757a;
     font-size: 14px;
+    height: 43px;
+    line-height: 43px;
 }
 
 .searchPage_results {
     max-width: 650px;
-    margin-top: 20px;
-    margin-left: 240px;
+    margin-top: 0;
+    margin-left: 175px;
     margin-bottom: 100px;
 }
 
@@ -76,18 +80,31 @@
     margin-right: 10px;
 }
 
-.serachPage_resultTitle {
+.searchPage_resultTitle {
     text-decoration: none;
+    color: #1a0dab;
+    line-height: 1.3;
 }
 
-.serachPage_resultTitle:hover {
+.searchPage_resultTitle:hover {
     text-decoration: underline;
 }
 
-.serachPage_resultTitle > h2 {
-    font-weight: 500;
+.searchPage_resultTitle > h2 {
+    font-weight: 400;
+    font-size: 20px;
 }
 
-.serachPage_resultSnippet {
-    margin-top: 10px;
+.searchPage_resultSnippet {
+    margin-top: 5px;
+    line-height: 1.58;
+    color: #4d5156;
+    font-size: 14px;
+}
+
+.searchPage_link {
+    color: #202124;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.3;
 }

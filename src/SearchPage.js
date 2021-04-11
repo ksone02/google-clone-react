@@ -35,36 +35,36 @@ function SearchPage() {
                         <div className="searchPage_optionsLeft">
                             <div className="searchPage_option">
                                 <SearchIcon />
-                                <Link to="/all">All</Link>
+                                <Link to="/all">전체</Link>
                             </div>
                             <div className="searchPage_option">
                                 <DescriptionIcon />
-                                <Link to="/news">News</Link>
+                                <Link to="/news">뉴스</Link>
                             </div>
                             <div className="searchPage_option">
                                 <ImageIcon />
-                                <Link to="/images">Images</Link>
+                                <Link to="/images">이미지</Link>
                             </div>
                             <div className="searchPage_option">
                                 <LocalOfferIcon />
-                                <Link to="/shopping">Shopping</Link>
+                                <Link to="/shopping">쇼핑</Link>
                             </div>
                             <div className="searchPage_option">
                                 <RoomIcon />
-                                <Link to="/maps">Maps</Link>
+                                <Link to="/maps">맵</Link>
                             </div>
                             <div className="searchPage_option">
                                 <MoreVertIcon />
-                                <Link to="/more">More</Link>
+                                <Link to="/more">더보기</Link>
                             </div>
                         </div>
 
                         <div className="searchPage_optionsRight">
                             <div className="searchPage_option">
-                                <Link to="/settings">Settings</Link>
+                                <Link to="/settings">설정</Link>
                             </div>
                             <div className="searchPage_option">
-                                <Link to="/tools">Tools</Link>
+                                <Link to="/tools">도구</Link>
                             </div>
                         </div>
                     </div>
@@ -74,19 +74,12 @@ function SearchPage() {
             {term && (
                 <div className="searchPage_results">
                     <p className="searchPage_resultCount">
-                        About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}
+                        검색결과 약 {data?.searchInformation.formattedTotalResults}개 ({data?.searchInformation.formattedSearchTime}초)
                     </p>
 
                     {data?.items.map(item => (
                         <div className="searchPage_result">
-                            <a href={item.link}>
-                                {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
-                                    <img 
-                                        className="searchPage_resultImage"
-                                        src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src}
-                                        alt=""
-                                    />
-                                )}
+                            <a href={item.link} className="searchPage_link">
                                 {item.displayLink} ▼
                             </a>
                             <a className="searchPage_resultTitle" href={item.link}>
